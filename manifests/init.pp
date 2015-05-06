@@ -53,12 +53,12 @@ class java7 {
     default: { notice "Unsupported operatingsystem ${::operatingsystem}" }
   }
 
-  file { '/etc/profile.d/set_java_home.sh':
-    ensure  => file,
-    group   => root,
-    owner   => root,
-    mode    => '0755',
-    source  => 'puppet:///modules/java7/set_java_home.sh',
-    require => Package['oracle-java7-installer']
-  }
+  #file { '/etc/profile.d/set_java_home.sh':
+  #  ensure  => file,
+  #  group   => root,
+  #  owner   => root,
+  #  mode    => '0755',
+  #  source  => 'puppet:///modules/java7/set_java_home.sh',
+  #  require => Package['oracle-java7-installer']
+  #}
 }
